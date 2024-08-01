@@ -203,7 +203,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.8352942, g: 0.9294118, b: 0.9294118, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -225,7 +225,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 10000
   field of view: 34
   orthographic: 1
   orthographic size: 6.2
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 2096127956}
   - component: {fileID: 2096127955}
   m_Layer: 0
-  m_Name: TableOfReceptors
+  m_Name: TableGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
       TransmitterColor: {r: 0.0034836421, g: 0.36927217, b: 0.01726687, a: 1}
       TransmitterSubclasses:
       - Name: 
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: A
         - Name: B
@@ -518,14 +518,14 @@ MonoBehaviour:
       TransmitterColor: {r: 1, g: 1, b: 1, a: 1}
       TransmitterSubclasses:
       - Name: A
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: 1
         - Name: 2
         - Name: 3
         - Name: 4
       - Name: N
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: 1
         - Name: 2A
@@ -535,7 +535,7 @@ MonoBehaviour:
         - Name: 3A
         - Name: 3B
       - Name: K
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: 1
         - Name: 2
@@ -546,7 +546,7 @@ MonoBehaviour:
       TransmitterColor: {r: 1, g: 1, b: 1, a: 1}
       TransmitterSubclasses:
       - Name: R
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: 1
         - Name: 5
@@ -560,7 +560,7 @@ MonoBehaviour:
       TransmitterColor: {r: 0.6138686, g: 0.735849, b: 0.72844964, a: 1}
       TransmitterSubclasses:
       - Name: 
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: Homo
         - Name: Hetero
@@ -572,7 +572,7 @@ MonoBehaviour:
       TransmitterColor: {r: 0.703504, g: 0, b: 0.21204899, a: 1}
       TransmitterSubclasses:
       - Name: Alpha
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: 1A
         - Name: 1B
@@ -581,7 +581,7 @@ MonoBehaviour:
         - Name: 2B
         - Name: 2C
       - Name: Beta
-        SubclassTextOnNewLine: 1
+        SubclassTextOrder: 1
         Receptors:
         - Name: 1
         - Name: 2
@@ -590,13 +590,155 @@ MonoBehaviour:
       TransmitterColor: {r: 0, g: 0.6966624, b: 1, a: 1}
       TransmitterSubclasses:
       - Name: 
-        SubclassTextOnNewLine: 0
+        SubclassTextOrder: 0
         Receptors:
         - Name: 1
         - Name: 5
         - Name: 2
         - Name: 3
         - Name: 4
+  - Name: Cholinergics
+    TableRow: 0
+    TableColumn: 2
+    TransmitterClasses:
+    - Name: nAchR
+      TransmitterColor: {r: 0.49865216, g: 0.34245485, b: 0.02620947, a: 1}
+      TransmitterSubclasses:
+      - Name: 
+        SubclassTextOrder: 1
+        Receptors:
+        - Name: Musc
+        - Name: Neuro
+    - Name: M
+      TransmitterColor: {r: 0, g: 0.26625705, b: 1, a: 1}
+      TransmitterSubclasses:
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 1
+        - Name: 2
+        - Name: 3
+        - Name: 4
+        - Name: 5
+  - Name: Histamine
+    TableRow: 0
+    TableColumn: 3
+    TransmitterClasses:
+    - Name: H
+      TransmitterColor: {r: 0.99693537, g: 0.46226406, b: 1, a: 1}
+      TransmitterSubclasses:
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 1
+        - Name: 2
+        - Name: 3
+        - Name: 4
+  - Name: Neuropeptides
+    TableRow: 1
+    TableColumn: 0
+    TransmitterClasses:
+    - Name: OR
+      TransmitterColor: {r: 0.5397126, g: 0.058510803, b: 0.735849, a: 1}
+      TransmitterSubclasses:
+      - Name: 
+        SubclassTextOrder: 2
+        Receptors:
+        - Name: M
+        - Name: D
+        - Name: K
+  - Name: Serotonin
+    TableRow: 1
+    TableColumn: 1
+    TransmitterClasses:
+    - Name: 5HT
+      TransmitterColor: {r: 1, g: 0.6474413, b: 0, a: 1}
+      TransmitterSubclasses:
+      - Name: 1
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: A
+        - Name: B
+        - Name: D
+        - Name: E
+        - Name: F
+      - Name: 2
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: A
+        - Name: B
+        - Name: C
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 3
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 4
+      - Name: 5
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: A
+        - Name: B
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 6
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 7
+  - Name: Cannabinoid
+    TableRow: 1
+    TableColumn: 2
+    TransmitterClasses:
+    - Name: CB
+      TransmitterColor: {r: 0.088342056, g: 0.7897574, b: 0.24970053, a: 1}
+      TransmitterSubclasses:
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 1
+        - Name: 2
+  - Name: Purinergic
+    TableRow: 1
+    TableColumn: 3
+    TransmitterClasses:
+    - Name: A
+      TransmitterColor: {r: 0.97304577, g: 0.934735, b: 0.25047398, a: 1}
+      TransmitterSubclasses:
+      - Name: 
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 1
+        - Name: 2A
+        - Name: 2B
+        - Name: 4
+    - Name: P2
+      TransmitterColor: {r: 0.972549, g: 0.93333334, b: 0.2509804, a: 1}
+      TransmitterSubclasses:
+      - Name: X
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 1
+        - Name: 2
+        - Name: 3
+        - Name: 4
+        - Name: 5
+        - Name: 6
+        - Name: 7
+      - Name: Y
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 1
+        - Name: 2
+        - Name: 4
+        - Name: 6
+        - Name: 11
+        - Name: 12
+        - Name: 13
+        - Name: 14
   WrapLengths:
   - TransmitterClassName: mGlu
     TransmitterSubclassName: R

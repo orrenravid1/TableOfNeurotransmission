@@ -6,6 +6,13 @@ using UnityEngine;
 
 namespace TON.Tests.TableOfReceptors
 {
+    public enum SubclassTextOrder
+    {
+        After,
+        NewLine,
+        Before
+    }
+
     [System.Serializable]
     public class Receptor
     {
@@ -16,7 +23,7 @@ namespace TON.Tests.TableOfReceptors
     public class TransmitterSubclass
     {
         public string Name;
-        public bool SubclassTextOnNewLine = true;
+        public SubclassTextOrder SubclassTextOrder = SubclassTextOrder.After;
         public List<Receptor> Receptors = new List<Receptor>();
     }
 
@@ -86,7 +93,8 @@ namespace TON.Tests.TableOfReceptors
             (int rows, int columns) = ComputeTableDimensions();
             (float height, float width) = (rows * initialTileSize, columns * initialTileSize);
             (float heightScale, float widthScale) = (initialHeight / height, initialWidth / width);
-            float scaleFactor = Mathf.Min(heightScale, widthScale);
+            // float scaleFactor = Mathf.Min(heightScale, widthScale);
+            float scaleFactor = 0.8f;
             float tileSize = initialTileSize * scaleFactor;
             float jump = initialJump * scaleFactor;
 
@@ -108,13 +116,15 @@ namespace TON.Tests.TableOfReceptors
             int prevGroupTableColumn = 0;
             int prevGroupDimRows = 0;
             int prevGroupDimCols = 0;
+            int maxPrevGroupDimRows = 0;
 
             foreach (ChemicalGroup group in ChemicalGroups)
             {
                 if (group.TableRow > prevGroupTableRow)
                 {
                     xGroupInit = xInit;
-                    yGroupInit -= jump * prevGroupDimRows;
+                    yGroupInit -= jump * maxPrevGroupDimRows;
+                    maxPrevGroupDimRows = 0;
                 }
                 else if (group.TableColumn > prevGroupTableColumn)
                 {
@@ -130,19 +140,31 @@ namespace TON.Tests.TableOfReceptors
                         int tClassTot = 0;
                         foreach (Receptor receptor in transmitterSubclass.Receptors)
                         {
-                            string sep = transmitterSubclass.SubclassTextOnNewLine ? "\n" : string.Empty;
-                            string tileName = $"{transmitterClass.Name}{sep}{transmitterSubclass.Name}{receptor.Name}";
+                            string tileName;
+                            if (transmitterSubclass.SubclassTextOrder == SubclassTextOrder.After)
+                            {
+                                tileName = $"{transmitterClass.Name}{transmitterSubclass.Name}{receptor.Name}";
+                            }
+                            else if (transmitterSubclass.SubclassTextOrder == SubclassTextOrder.NewLine)
+                            {
+                                tileName = $"{transmitterClass.Name}\n{transmitterSubclass.Name}{receptor.Name}";
+                            }
+                            else
+                            {
+                                tileName = $"{receptor.Name}{transmitterClass.Name}{transmitterSubclass.Name}";
+                            }
+
                             GameObject tableTile = Instantiate(TableTilePrefab);
-                            tableTile.name = tileName;
+                            tableTile.name = tileName.Replace("\n",string.Empty);
                             tableTile.transform.position = new Vector3(xCurr, yCurr, 0);
                             tableTile.transform.localScale = tileSize * Vector3.one;
                             tableTile.transform.parent = tableParent.transform;
                             SpriteRenderer tileRenderer = GetComponentInChildrenOnly<SpriteRenderer>(tableTile);
                             tileRenderer.color = transmitterClass.TransmitterColor;
                             TextMeshPro textMesh = tableTile.GetComponentInChildren<TextMeshPro>();
-                            float V;
-                            Color.RGBToHSV(transmitterClass.TransmitterColor, out _, out _, out V);
-                            if (V > 0.65f)
+                            Color tColor = transmitterClass.TransmitterColor;
+                            float Y = 0.2126f * tColor.r + 0.7152f * tColor.g + 0.0722f * tColor.b;
+                            if (Y > 0.8f)
                             {
                                 textMesh.color = Color.black;
                             }
@@ -169,6 +191,7 @@ namespace TON.Tests.TableOfReceptors
                 prevGroupTableRow = group.TableRow;
                 prevGroupTableColumn = group.TableColumn;
                 (prevGroupDimRows, prevGroupDimCols) = ComputeGroupDimension(group);
+                maxPrevGroupDimRows = Mathf.Max(maxPrevGroupDimRows, prevGroupDimRows);
             }
         }
 
