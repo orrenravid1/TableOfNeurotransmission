@@ -2,6 +2,7 @@ using Alchemy.Inspector;
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace TON.Tests.TableOfReceptors
@@ -17,6 +18,7 @@ namespace TON.Tests.TableOfReceptors
     public class Receptor
     {
         public string Name;
+        public bool OverrideName;
     }
 
     [System.Serializable]
@@ -25,6 +27,7 @@ namespace TON.Tests.TableOfReceptors
         public string Name;
         public SubclassTextOrder SubclassTextOrder = SubclassTextOrder.After;
         public List<Receptor> Receptors = new List<Receptor>();
+        public bool OverrideName;
     }
 
     [System.Serializable]
@@ -64,6 +67,30 @@ namespace TON.Tests.TableOfReceptors
         public int WrapLength;
     }
 
+    [System.Serializable]
+    public class ReceptorData
+    {
+        [ReadOnly]
+        public string CompleteReceptorName;
+        [ReadOnly]
+        public string ReceptorName;
+        [ReadOnly]
+        public string TransmitterSubclassName;
+        [ReadOnly]
+        public string TransmitterClassName;
+        [ReadOnly]
+        public string ChemicalGroupName;
+
+        public ReceptorData(string completeReceptorName, string receptorName, string transmitterSubclassName, string transmitterClassName, string chemicalGroupName)
+        {
+            CompleteReceptorName = completeReceptorName;
+            ReceptorName = receptorName;
+            TransmitterSubclassName = transmitterSubclassName;
+            TransmitterClassName = transmitterClassName;
+            ChemicalGroupName = chemicalGroupName;
+        }
+    }
+
     [DisableAlchemyEditor]
     public class TableOfReceptorsTest : MonoBehaviour
     {
@@ -81,18 +108,35 @@ namespace TON.Tests.TableOfReceptors
         private const float xInit = -initialWidth / 2;
         private const float yInit = initialHeight / 2;
 
+        private const float padding = 0.6f;
+
         private GameObject tableParent;
+
+        private Dictionary<string, GameObject> receptorTilesByName = new();
+        private Dictionary<string, ReceptorData> receptorDataByName = new();
 
         private void Start()
         {
             RenderTable();
         }
 
+        private void OnDrawGizmos()
+        {
+            if (tableParent != null)
+            {
+                Bounds tableBounds = ComputeBoundingBox(tableParent.transform);
+                // Set the color of the Gizmo
+                Gizmos.color = Color.green;
+                // Draw a wireframe box representing the bounding box
+                Gizmos.DrawWireCube(tableBounds.center, tableBounds.size);
+            }
+        }
+
         private void RenderTable()
         {
-            (int rows, int columns) = ComputeTableDimensions();
-            (float height, float width) = (rows * initialTileSize, columns * initialTileSize);
-            (float heightScale, float widthScale) = (initialHeight / height, initialWidth / width);
+            // (int rows, int columns) = ComputeTableDimensions();
+            // (float height, float width) = (rows * initialTileSize, columns * initialTileSize);
+            // (float heightScale, float widthScale) = (initialHeight / height, initialWidth / width);
             // float scaleFactor = Mathf.Min(heightScale, widthScale);
             float scaleFactor = 0.8f;
             float tileSize = initialTileSize * scaleFactor;
@@ -114,7 +158,7 @@ namespace TON.Tests.TableOfReceptors
             float yGroupInit = yInit;
             int prevGroupTableRow = 0;
             int prevGroupTableColumn = 0;
-            int prevGroupDimRows = 0;
+            int prevGroupDimRows;
             int prevGroupDimCols = 0;
             int maxPrevGroupDimRows = 0;
 
@@ -141,7 +185,15 @@ namespace TON.Tests.TableOfReceptors
                         foreach (Receptor receptor in transmitterSubclass.Receptors)
                         {
                             string tileName;
-                            if (transmitterSubclass.SubclassTextOrder == SubclassTextOrder.After)
+                            if (receptor.OverrideName)
+                            {
+                                tileName = receptor.Name;
+                            }
+                            else if (transmitterSubclass.OverrideName)
+                            {
+                                tileName = $"{transmitterSubclass.Name}{receptor.Name}";
+                            }
+                            else if (transmitterSubclass.SubclassTextOrder == SubclassTextOrder.After)
                             {
                                 tileName = $"{transmitterClass.Name}{transmitterSubclass.Name}{receptor.Name}";
                             }
@@ -155,10 +207,17 @@ namespace TON.Tests.TableOfReceptors
                             }
 
                             GameObject tableTile = Instantiate(TableTilePrefab);
-                            tableTile.name = tileName.Replace("\n",string.Empty);
+                            string receptorCompleteName = tileName.Replace("\n", string.Empty);
+                            tableTile.name = receptorCompleteName;
                             tableTile.transform.position = new Vector3(xCurr, yCurr, 0);
                             tableTile.transform.localScale = tileSize * Vector3.one;
                             tableTile.transform.parent = tableParent.transform;
+                            receptorTilesByName[receptorCompleteName] = tableTile;
+
+                            ReceptorDataContainer receptorDataContainer = tableTile.GetComponent<ReceptorDataContainer>();
+                            receptorDataContainer.ReceptorData = new ReceptorData(receptorCompleteName, receptor.Name, transmitterSubclass.Name, transmitterClass.Name, group.Name);
+                            receptorDataByName[receptorCompleteName] = receptorDataContainer.ReceptorData;
+
                             SpriteRenderer tileRenderer = GetComponentInChildrenOnly<SpriteRenderer>(tableTile);
                             tileRenderer.color = transmitterClass.TransmitterColor;
                             TextMeshPro textMesh = tableTile.GetComponentInChildren<TextMeshPro>();
@@ -169,8 +228,10 @@ namespace TON.Tests.TableOfReceptors
                                 textMesh.color = Color.black;
                             }
                             textMesh.text = tileName;
+
                             i++;
                             tClassTot++;
+
                             if (i >= GetWrapLength(transmitterClass, transmitterSubclass) && tClassTot < transmitterSubclass.Receptors.Count)
                             {
                                 i = 0;
@@ -193,6 +254,25 @@ namespace TON.Tests.TableOfReceptors
                 (prevGroupDimRows, prevGroupDimCols) = ComputeGroupDimension(group);
                 maxPrevGroupDimRows = Mathf.Max(maxPrevGroupDimRows, prevGroupDimRows);
             }
+
+            Bounds tableBounds = ComputeBoundingBox(tableParent.transform);
+            Vector3 tableSize = tableBounds.size;
+            float cameraHeight = Camera.main.orthographicSize * 2;
+            float cameraWidth = cameraHeight * Camera.main.aspect;
+            float widthScaleFactor = cameraWidth / tableSize.x;
+            float heightScaleFator = cameraHeight / tableSize.y;
+            float tableScaleFactor = Mathf.Min(widthScaleFactor, heightScaleFator);
+            MoveParent(tableParent.transform, tableBounds.center);
+            tableParent.transform.localScale *= tableScaleFactor;
+            tableParent.transform.position = Vector3.zero;
+
+            Bounds newTableBounds = ComputeBoundingBox(tableParent.transform);
+            float sizeWidthDiff = (cameraWidth - newTableBounds.size.x) / 2;
+            float sizeHeightDiff = (cameraHeight - newTableBounds.size.y) / 2;
+            float paddingWidthReduction = Mathf.Clamp(0, padding, padding - sizeWidthDiff) / newTableBounds.extents.x;
+            float paddingHeightReduction = Mathf.Clamp(0, padding, padding - sizeHeightDiff) / newTableBounds.extents.y;
+
+            tableParent.transform.localScale -= Vector3.one * Mathf.Max(paddingWidthReduction, paddingHeightReduction);
         }
 
         private (int, int) ComputeTableDimensions()
@@ -273,6 +353,51 @@ namespace TON.Tests.TableOfReceptors
                 }
             }
             return transmitterSubclass.Receptors.Count;
+        }
+
+        private Bounds ComputeBoundingBox(Transform obj)
+        {
+            Bounds combinedBounds = new Bounds(obj.position, Vector3.zero);
+            Renderer objRenderer = obj.GetComponent<Renderer>();
+
+            if (objRenderer != null)
+            {
+                combinedBounds = objRenderer.bounds;
+            }
+
+            foreach (Transform child in obj)
+            {
+                Bounds childBounds = ComputeBoundingBox(child);
+                if (childBounds.size != Vector3.zero)
+                {
+                    combinedBounds.Encapsulate(childBounds);
+                }
+            }
+
+            return combinedBounds;
+        }
+
+        private void MoveParent(Transform parent, Vector3 newPosition)
+        {
+            // Create a list to store the original positions of the children
+            List<Vector3> originalChildPositions = new List<Vector3>();
+
+            // Iterate through each child and store its position
+            foreach (Transform child in parent)
+            {
+                originalChildPositions.Add(child.position);
+            }
+
+            // Move the parent to the new position
+            parent.position = newPosition;
+
+            // Reapply the original positions to each child
+            int index = 0;
+            foreach (Transform child in parent)
+            {
+                child.position = originalChildPositions[index];
+                index++;
+            }
         }
 
         private T GetComponentInChildrenOnly<T>(GameObject go) where T : Component

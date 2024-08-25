@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5989591285247405129}
   - component: {fileID: 6375394277721716526}
+  - component: {fileID: 8310990962736629482}
   m_Layer: 0
   m_Name: TableTile
   m_TagString: Untagged
@@ -170,6 +171,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8310990962736629482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115569153795560717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbf0ef1a9851614bb46009ade8bafd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8389101722918506475
 GameObject:
   m_ObjectHideFlags: 0

@@ -512,8 +512,22 @@ MonoBehaviour:
         SubclassTextOrder: 1
         Receptors:
         - Name: A
+          OverrideName: 0
         - Name: B
+          OverrideName: 0
         - Name: C
+          OverrideName: 0
+        OverrideName: 0
+      - Name: GAT
+        SubclassTextOrder: 1
+        Receptors:
+        - Name: 1
+          OverrideName: 0
+        - Name: 2
+          OverrideName: 0
+        - Name: 3
+          OverrideName: 0
+        OverrideName: 1
     - Name: Glu
       TransmitterColor: {r: 1, g: 1, b: 1, a: 1}
       TransmitterSubclasses:
@@ -521,27 +535,46 @@ MonoBehaviour:
         SubclassTextOrder: 1
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
+        OverrideName: 0
       - Name: N
         SubclassTextOrder: 1
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2A
+          OverrideName: 0
         - Name: 2B
+          OverrideName: 0
         - Name: 2C
+          OverrideName: 0
         - Name: 2D
+          OverrideName: 0
         - Name: 3A
+          OverrideName: 0
         - Name: 3B
+          OverrideName: 0
+        OverrideName: 0
       - Name: K
         SubclassTextOrder: 1
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
         - Name: 5
+          OverrideName: 0
+        OverrideName: 0
     - Name: mGlu
       TransmitterColor: {r: 1, g: 1, b: 1, a: 1}
       TransmitterSubclasses:
@@ -549,13 +582,22 @@ MonoBehaviour:
         SubclassTextOrder: 1
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 5
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
         - Name: 6
+          OverrideName: 0
         - Name: 7
+          OverrideName: 0
         - Name: 8
+          OverrideName: 0
+        OverrideName: 0
     - Name: Glyc
       TransmitterColor: {r: 0.6138686, g: 0.735849, b: 0.72844964, a: 1}
       TransmitterSubclasses:
@@ -563,7 +605,18 @@ MonoBehaviour:
         SubclassTextOrder: 1
         Receptors:
         - Name: Homo
+          OverrideName: 0
         - Name: Hetero
+          OverrideName: 0
+        OverrideName: 0
+      - Name: GlyT
+        SubclassTextOrder: 1
+        Receptors:
+        - Name: 1
+          OverrideName: 0
+        - Name: 2
+          OverrideName: 0
+        OverrideName: 1
   - Name: Catecholamines
     TableRow: 0
     TableColumn: 1
@@ -574,18 +627,27 @@ MonoBehaviour:
       - Name: Alpha
         SubclassTextOrder: 1
         Receptors:
-        - Name: 1A
-        - Name: 1B
-        - Name: 1C
-        - Name: 2A
-        - Name: 2B
-        - Name: 2C
+        - Name: 1
+          OverrideName: 0
+        - Name: 2
+          OverrideName: 0
+        OverrideName: 0
       - Name: Beta
         SubclassTextOrder: 1
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
+        OverrideName: 0
+      - Name: NAT
+        SubclassTextOrder: 1
+        Receptors:
+        - Name: 
+          OverrideName: 0
+        OverrideName: 1
     - Name: D
       TransmitterColor: {r: 0, g: 0.6966624, b: 1, a: 1}
       TransmitterSubclasses:
@@ -593,10 +655,22 @@ MonoBehaviour:
         SubclassTextOrder: 0
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 5
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
+        OverrideName: 0
+      - Name: DAT
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 
+          OverrideName: 0
+        OverrideName: 1
   - Name: Cholinergics
     TableRow: 0
     TableColumn: 2
@@ -608,7 +682,10 @@ MonoBehaviour:
         SubclassTextOrder: 1
         Receptors:
         - Name: Musc
+          OverrideName: 0
         - Name: Neuro
+          OverrideName: 0
+        OverrideName: 0
     - Name: M
       TransmitterColor: {r: 0, g: 0.26625705, b: 1, a: 1}
       TransmitterSubclasses:
@@ -616,10 +693,16 @@ MonoBehaviour:
         SubclassTextOrder: 0
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
         - Name: 5
+          OverrideName: 0
+        OverrideName: 0
   - Name: Histamine
     TableRow: 0
     TableColumn: 3
@@ -631,9 +714,14 @@ MonoBehaviour:
         SubclassTextOrder: 0
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
+        OverrideName: 0
   - Name: Neuropeptides
     TableRow: 1
     TableColumn: 0
@@ -645,8 +733,12 @@ MonoBehaviour:
         SubclassTextOrder: 2
         Receptors:
         - Name: M
+          OverrideName: 0
         - Name: D
+          OverrideName: 0
         - Name: K
+          OverrideName: 0
+        OverrideName: 0
   - Name: Serotonin
     TableRow: 1
     TableColumn: 1
@@ -658,37 +750,64 @@ MonoBehaviour:
         SubclassTextOrder: 0
         Receptors:
         - Name: A
+          OverrideName: 0
         - Name: B
+          OverrideName: 0
         - Name: D
+          OverrideName: 0
         - Name: E
+          OverrideName: 0
         - Name: F
+          OverrideName: 0
+        OverrideName: 0
       - Name: 2
         SubclassTextOrder: 0
         Receptors:
         - Name: A
+          OverrideName: 0
         - Name: B
+          OverrideName: 0
         - Name: C
-      - Name: 
+          OverrideName: 0
+        OverrideName: 0
+      - Name: 3
         SubclassTextOrder: 0
         Receptors:
-        - Name: 3
-      - Name: 
+        - Name: 
+          OverrideName: 0
+        OverrideName: 0
+      - Name: 4
         SubclassTextOrder: 0
         Receptors:
-        - Name: 4
+        - Name: 
+          OverrideName: 0
+        OverrideName: 0
       - Name: 5
         SubclassTextOrder: 0
         Receptors:
         - Name: A
+          OverrideName: 0
         - Name: B
-      - Name: 
+          OverrideName: 0
+        OverrideName: 0
+      - Name: 6
         SubclassTextOrder: 0
         Receptors:
-        - Name: 6
-      - Name: 
+        - Name: 
+          OverrideName: 0
+        OverrideName: 0
+      - Name: 7
         SubclassTextOrder: 0
         Receptors:
-        - Name: 7
+        - Name: 
+          OverrideName: 0
+        OverrideName: 0
+      - Name: SERT
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 
+          OverrideName: 0
+        OverrideName: 1
   - Name: Cannabinoid
     TableRow: 1
     TableColumn: 2
@@ -700,7 +819,10 @@ MonoBehaviour:
         SubclassTextOrder: 0
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
+        OverrideName: 0
   - Name: Purinergic
     TableRow: 1
     TableColumn: 3
@@ -712,9 +834,14 @@ MonoBehaviour:
         SubclassTextOrder: 0
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2A
+          OverrideName: 0
         - Name: 2B
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
+        OverrideName: 0
     - Name: P2
       TransmitterColor: {r: 0.972549, g: 0.93333334, b: 0.2509804, a: 1}
       TransmitterSubclasses:
@@ -722,23 +849,51 @@ MonoBehaviour:
         SubclassTextOrder: 0
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 3
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
         - Name: 5
+          OverrideName: 0
         - Name: 6
+          OverrideName: 0
         - Name: 7
+          OverrideName: 0
+        OverrideName: 0
       - Name: Y
         SubclassTextOrder: 0
         Receptors:
         - Name: 1
+          OverrideName: 0
         - Name: 2
+          OverrideName: 0
         - Name: 4
+          OverrideName: 0
         - Name: 6
+          OverrideName: 0
         - Name: 11
+          OverrideName: 0
         - Name: 12
+          OverrideName: 0
         - Name: 13
+          OverrideName: 0
         - Name: 14
+          OverrideName: 0
+        OverrideName: 0
+    - Name: Transporter
+      TransmitterColor: {r: 0.972549, g: 0.93333334, b: 0.2509804, a: 1}
+      TransmitterSubclasses:
+      - Name: ENT
+        SubclassTextOrder: 0
+        Receptors:
+        - Name: 1
+          OverrideName: 0
+        - Name: 2
+          OverrideName: 0
+        OverrideName: 1
   WrapLengths:
   - TransmitterClassName: mGlu
     TransmitterSubclassName: R
