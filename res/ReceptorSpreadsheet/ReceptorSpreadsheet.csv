@@ -1,0 +1,189 @@
+﻿Neurotransmitter,Receptor Family,Receptor Subtype,Subunit Composition,Number of Subunits,Color,Color Name
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),NMDA Receptors - GluN1/GluN2A,"2 x GluN1, 2 x GluN2A",4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),NMDA Receptors - GluN1/GluN2B,"2 x GluN1, 2 x GluN2B",4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),NMDA Receptors - GluN1/GluN2C,"2 x GluN1, 2 x GluN2C",4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),NMDA Receptors - GluN1/GluN2D,"2 x GluN1, 2 x GluN2D",4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),NMDA Receptors - GluN1/GluN2/GluN3,Combinations including GluN3A or GluN3B,4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),AMPA Receptors - Homomeric GluA1,4 x GluA1,4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),AMPA Receptors - Heteromeric GluA1/GluA2,Various combinations of GluA1 and GluA2,4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),AMPA Receptors - Other Combinations,Various combinations of GluA1-4 subunits,4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),Kainate Receptors - Homomeric GluK1,4 x GluK1,4,#FFF8DC,Cornsilk
+Glutamate,Ionotropic Glutamate Receptors (iGluRs),Kainate Receptors - Heteromeric Combinations,Various combinations of GluK1-5 subunits,4,#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group I mGluRs - mGluR1,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group I mGluRs - mGluR5,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group II mGluRs - mGluR2,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group II mGluRs - mGluR3,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group III mGluRs - mGluR4,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group III mGluRs - mGluR6,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group III mGluRs - mGluR7,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+Glutamate,Metabotropic Glutamate Receptors (mGluRs),Group III mGluRs - mGluR8,Single polypeptide chain (forms homodimers),1 (monomer) or 2 (dimer),#FFF8DC,Cornsilk
+GABA,Ionotropic GABA Receptors (GABA_A),GABA_A Receptors - Common Form,"2 x α (1-6), 2 x β (1-3), 1 x γ (1-3)",5,#006400,DarkGreen
+GABA,Ionotropic GABA Receptors (GABA_A),GABA_A Receptors - αβδ Subtype,"Various combinations of α (1-6), β (1-3), δ",5,#006400,DarkGreen
+GABA,Ionotropic GABA Receptors (GABA_A),GABA_A Receptors - αβε Subtype,"Various combinations of α (1-6), β (1-3), ε",5,#006400,DarkGreen
+GABA,Ionotropic GABA Receptors (GABA_A),GABA_A Receptors - αβθ Subtype,"Various combinations of α (1-6), β (1-3), θ",5,#006400,DarkGreen
+GABA,Ionotropic GABA Receptors (GABA_A),GABA_A Receptors - αβπ Subtype,"Various combinations of α (1-6), β (1-3), π",5,#006400,DarkGreen
+GABA,Ionotropic GABA Receptors (GABA_C),GABA_C Receptors,5 x ρ (1-3) subunits,5,#006400,DarkGreen
+GABA,Metabotropic GABA Receptors (GABA_B),GABA_B Receptors,GABA_B1 and GABA_B2 subunits,2,#006400,DarkGreen
+Glycine,Ionotropic Glycine Receptors (GlyRs),GlyR - Homomeric α1,5 x α1 subunits,5,#B0C4DE,LightSteelBlue
+Glycine,Ionotropic Glycine Receptors (GlyRs),GlyR - Homomeric α2,5 x α2 subunits,5,#B0C4DE,LightSteelBlue
+Glycine,Ionotropic Glycine Receptors (GlyRs),GlyR - Homomeric α3,5 x α3 subunits,5,#B0C4DE,LightSteelBlue
+Glycine,Ionotropic Glycine Receptors (GlyRs),GlyR - Heteromeric α1β,Various combinations of α1 and β subunits,5,#B0C4DE,LightSteelBlue
+Glycine,Ionotropic Glycine Receptors (GlyRs),GlyR - Heteromeric α2β,Various combinations of α2 and β subunits,5,#B0C4DE,LightSteelBlue
+Glycine,Ionotropic Glycine Receptors (GlyRs),GlyR - Heteromeric α3β,Various combinations of α3 and β subunits,5,#B0C4DE,LightSteelBlue
+Acetylcholine,Nicotinic Acetylcholine Receptors (nAChRs),Muscle-type (Adult),"(α1)2, β1, δ, ε",5,#8B4513,SaddleBrown
+Acetylcholine,Nicotinic Acetylcholine Receptors (nAChRs),Muscle-type (Fetal),"(α1)2, β1, δ, γ",5,#8B4513,SaddleBrown
+Acetylcholine,Nicotinic Acetylcholine Receptors (nAChRs),Neuronal α7 Homomeric,5 x α7 subunits,5,#8B4513,SaddleBrown
+Acetylcholine,Nicotinic Acetylcholine Receptors (nAChRs),Neuronal α4β2 Heteromeric,(α4)2(β2)3 or (α4)3(β2)2,5,#8B4513,SaddleBrown
+Acetylcholine,Nicotinic Acetylcholine Receptors (nAChRs),Neuronal α3β4 Heteromeric,Various combinations of α3 and β4 subunits,5,#8B4513,SaddleBrown
+Acetylcholine,Muscarinic Acetylcholine Receptors (mAChRs),M1,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#0000CD,MediumBlue
+Acetylcholine,Muscarinic Acetylcholine Receptors (mAChRs),M2,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#0000CD,MediumBlue
+Acetylcholine,Muscarinic Acetylcholine Receptors (mAChRs),M3,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#0000CD,MediumBlue
+Acetylcholine,Muscarinic Acetylcholine Receptors (mAChRs),M4,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#0000CD,MediumBlue
+Acetylcholine,Muscarinic Acetylcholine Receptors (mAChRs),M5,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#0000CD,MediumBlue
+Dopamine,D1-like Receptors,D1,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#87CEFA,LightSkyBlue
+Dopamine,D1-like Receptors,D5,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#87CEFA,LightSkyBlue
+Dopamine,D2-like Receptors,D2,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#87CEFA,LightSkyBlue
+Dopamine,D2-like Receptors,D3,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#87CEFA,LightSkyBlue
+Dopamine,D2-like Receptors,D4,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#87CEFA,LightSkyBlue
+Endocannabinoids,Cannabinoid Receptors,CB1,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#ADFF2F,GreenYellow
+Endocannabinoids,Cannabinoid Receptors,CB2,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#ADFF2F,GreenYellow
+Endocannabinoids,Cannabinoid Receptors,GPR55,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#00FF7F,SpringGreen
+Endocannabinoids,Cannabinoid Receptors,GPR18,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#00FF7F,SpringGreen
+Serotonin,5-HT1 Receptors,5-HT1A,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT1 Receptors,5-HT1B,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT1 Receptors,5-HT1D,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT1 Receptors,5-HT1E,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT1 Receptors,5-HT1F,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT2 Receptors,5-HT2A,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT2 Receptors,5-HT2B,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT2 Receptors,5-HT2C,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT3 Receptors,5-HT3A Homomeric,5 x 5-HT3A subunits,5,#FFA500,Orange
+Serotonin,5-HT3 Receptors,5-HT3AB Heteromeric,Combination of 5-HT3A and 5-HT3B subunits,5,#FFA500,Orange
+Serotonin,5-HT3 Receptors,5-HT3AC/D/E Heteromeric,"Combinations including 5-HT3C, D, or E subunits",5,#FFA500,Orange
+Serotonin,5-HT4 Receptors,5-HT4,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT5 Receptors,5-HT5A,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin (Non-Human),5-HT5 Receptors,5-HT5B,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT6 Receptors,5-HT6,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Serotonin,5-HT7 Receptors,5-HT7,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#FFA500,Orange
+Epinephrine/Norepinephrine,Alpha-1 Adrenergic Receptors,α1A,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Alpha-1 Adrenergic Receptors,α1B,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Alpha-1 Adrenergic Receptors,α1D,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Alpha-2 Adrenergic Receptors,α2A,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Alpha-2 Adrenergic Receptors,α2B,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Alpha-2 Adrenergic Receptors,α2C,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Beta Adrenergic Receptors,β1,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Beta Adrenergic Receptors,β2,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Epinephrine/Norepinephrine,Beta Adrenergic Receptors,β3,Single polypeptide chain (can form dimers),1 (monomer) or 2 (dimer),#DC143C,Crimson
+Adenosine,Adenosine Receptors (P1),A1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+Adenosine,Adenosine Receptors (P1),A2A,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+Adenosine,Adenosine Receptors (P1),A2B,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+Adenosine,Adenosine Receptors (P1),A3,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2X Receptors,P2X1,Homotrimer of P2X1 subunits,3,#FFFF00,Yellow
+ATP,P2X Receptors,P2X2,Homotrimer of P2X2 subunits,3,#FFFF00,Yellow
+ATP,P2X Receptors,P2X3,Homotrimer of P2X3 subunits,3,#FFFF00,Yellow
+ATP,P2X Receptors,P2X4,Homotrimer of P2X4 subunits,3,#FFFF00,Yellow
+ATP,P2X Receptors,P2X5,Homotrimer of P2X5 subunits,3,#FFFF00,Yellow
+ATP,P2X Receptors,P2X6,Homotrimer of P2X6 subunits,3,#FFFF00,Yellow
+ATP,P2X Receptors,P2X7,Homotrimer of P2X7 subunits,3,#FFFF00,Yellow
+ATP,P2X Receptors,P2X2/3 Heteromeric,Combination of P2X2 and P2X3 subunits,3,#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y4,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y6,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y11,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y12,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y13,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+ATP,P2Y Receptors,P2Y14,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFFF00,Yellow
+Histamine,Histamine Receptors,H1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#DDA0DD,Plum
+Histamine,Histamine Receptors,H2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#DDA0DD,Plum
+Histamine,Histamine Receptors,H3,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#DDA0DD,Plum
+Histamine,Histamine Receptors,H4,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#DDA0DD,Plum
+Opioid Peptides,Opioid Receptors,μ (Mu) Receptor,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#9932CC,DarkOrchid
+Opioid Peptides,Opioid Receptors,δ (Delta) Receptor,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#9932CC,DarkOrchid
+Opioid Peptides,Opioid Receptors,κ (Kappa) Receptor,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#9932CC,DarkOrchid
+Opioid Peptides,Opioid Receptors,NOP (Nociceptin) Receptor,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#9932CC,DarkOrchid
+Neuropeptide Y,NPY Receptors,Y1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#D2691E,Chocolate
+Neuropeptide Y,NPY Receptors,Y2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#D2691E,Chocolate
+Neuropeptide Y,NPY Receptors,Y4,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#D2691E,Chocolate
+Neuropeptide Y,NPY Receptors,Y5,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#D2691E,Chocolate
+Galanin,Galanin Receptors,GAL1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#E6E6FA,Lavender
+Galanin,Galanin Receptors,GAL2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#E6E6FA,Lavender
+Galanin,Galanin Receptors,GAL3,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#E6E6FA,Lavender
+Substance P,Neurokinin Receptors,NK1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#B22222,FireBrick
+Neurokinin A,Neurokinin Receptors,NK2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#B22222,FireBrick
+Neurokinin B,Neurokinin Receptors,NK3,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#B22222,FireBrick
+CRF,CRF Receptors,CRF1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#696969,DimGray
+CRF,CRF Receptors,CRF2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#696969,DimGray
+Vasopressin,Vasopressin Receptors,V1a,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#00FFFF,Aqua
+Vasopressin,Vasopressin Receptors,V1b,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#00FFFF,Aqua
+Vasopressin,Vasopressin Receptors,V2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#00FFFF,Aqua
+Oxytocin,Oxytocin Receptor,OXTR,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFC0CB,Pink
+Melatonin,Melatonin Receptors,MT1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#191970,MidnightBlue
+Melatonin,Melatonin Receptors,MT2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#191970,MidnightBlue
+Cholecystokinin,CCK Receptors,CCK1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#A0522D,Sienna
+Cholecystokinin,CCK Receptors,CCK2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#A0522D,Sienna
+Somatostatin,Somatostatin Receptors,sst1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#708090,SlateGray
+Somatostatin,Somatostatin Receptors,sst2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#708090,SlateGray
+Somatostatin,Somatostatin Receptors,sst3,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#708090,SlateGray
+Somatostatin,Somatostatin Receptors,sst4,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#708090,SlateGray
+Somatostatin,Somatostatin Receptors,sst5,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#708090,SlateGray
+Tachykinins,Tachykinin Receptors,NK1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#B22222,FireBrick
+Tachykinins,Tachykinin Receptors,NK2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#B22222,FireBrick
+Tachykinins,Tachykinin Receptors,NK3,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#B22222,FireBrick
+Endothelin,Endothelin Receptors,ETA,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#800000,Maroon
+Endothelin,Endothelin Receptors,ETB,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#800000,Maroon
+Melanin-Concentrating Hormone,MCH Receptors,MCHR1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#483D8B,DarkSlateBlue
+Melanin-Concentrating Hormone,MCH Receptors,MCHR2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#483D8B,DarkSlateBlue
+Ghrelin,Ghrelin Receptors,GHS-R1a,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#B8860B,DarkGoldenRod
+Ghrelin,Ghrelin Receptors,GHS-R1b,Single polypeptide chain (non-functional truncated receptor),1 (monomer),#B8860B,DarkGoldenRod
+Neurotensin,Neurotensin Receptors,NTS1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#20B2AA,LightSeaGreen
+Neurotensin,Neurotensin Receptors,NTS2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#20B2AA,LightSeaGreen
+Neurotensin,Neurotensin Receptors,NTS3,Single polypeptide chain (Sortilin receptor),1 (monomer),#20B2AA,LightSeaGreen
+Kisspeptin,Kisspeptin Receptor,Kiss1R (GPR54),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#C71585,MediumVioletRed
+CGRP,CGRP Receptor,CGRP Receptor,Heterodimer of CLR and RAMP1,2,#F08080,LightCoral
+Sigma Ligands,Sigma Receptors,Sigma-1 Receptor,Single polypeptide chain,1,#FF1493,DeepPink
+Sigma Ligands,Sigma Receptors,Sigma-2 Receptor,Single polypeptide chain,1,#FF1493,DeepPink
+Imidazoline Ligands,Imidazoline Receptors,I1 Imidazoline Receptor,Protein associated with signal transduction,1,#4682B4,SteelBlue
+Imidazoline Ligands,Imidazoline Receptors,I2 Imidazoline Receptor,Allosteric site on monoamine oxidase (MAO) or associated proteins,1,#4682B4,SteelBlue
+Imidazoline Ligands,Imidazoline Receptors,I3 Imidazoline Receptor,Protein involved in insulin secretion,1,#4682B4,SteelBlue
+Nitric Oxide,Soluble Guanylyl Cyclase (sGC),sGC α1β1 Heterodimer,α1 and β1 subunits,2,#778899,LightSlateGray
+Nitric Oxide,Soluble Guanylyl Cyclase (sGC),sGC α2β1 Heterodimer,α2 and β1 subunits,2,#778899,LightSlateGray
+Orexin,Orexin Receptors,OX1R,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFD700,Gold
+Orexin,Orexin Receptors,OX2R,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFD700,Gold
+Melanocortins,Melanocortin Receptors,MC1R,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#CD853F,Peru
+Melanocortins,Melanocortin Receptors,MC2R,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#CD853F,Peru
+Melanocortins,Melanocortin Receptors,MC3R,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#CD853F,Peru
+Melanocortins,Melanocortin Receptors,MC4R,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#CD853F,Peru
+Melanocortins,Melanocortin Receptors,MC5R,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#CD853F,Peru
+Bombesin,Bombesin Receptors,BB1 (Neuromedin B Receptor),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#BDB76B,DarkKhaki
+Bombesin,Bombesin Receptors,BB2 (Gastrin-Releasing Peptide Receptor),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#BDB76B,DarkKhaki
+Bombesin,Bombesin Receptors,BB3 (Bombesin Receptor Subtype 3),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#BDB76B,DarkKhaki
+Bradykinin,Bradykinin Receptors,B1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#CD5C5C,IndianRed
+Bradykinin,Bradykinin Receptors,B2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#CD5C5C,IndianRed
+Neuropeptide FF,NPFF Receptors,NPFF1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#9370DB,MediumPurple
+Neuropeptide FF,NPFF Receptors,NPFF2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#9370DB,MediumPurple
+Neuropeptide B/W,NPBWR Receptors,NPBWR1 (GPR7),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#F4A460,SandyBrown
+Neuropeptide B/W,NPBWR Receptors,NPBWR2 (GPR8),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#F4A460,SandyBrown
+Prolactin-Releasing Peptide,PrRP Receptors,GPR10,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFB6C1,LightPink
+Motilin,Motilin Receptor,MLNR (GPR38),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FF7F50,Coral
+Neuromedin U,NMU Receptors,NMUR1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#48D1CC,MediumTurquoise
+Neuromedin U,NMU Receptors,NMUR2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#48D1CC,MediumTurquoise
+Neuropeptide S,NPS Receptor,NPSR1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#EEE8AA,PaleGoldenRod
+Relaxin,Relaxin Family Receptors,RXFP1,Single polypeptide chain (GPCR with LDLa module),1 (monomer) or 2 (dimer),#D8BFD8,Thistle
+Relaxin,Relaxin Family Receptors,RXFP2,Single polypeptide chain (GPCR with LDLa module),1 (monomer) or 2 (dimer),#D8BFD8,Thistle
+Relaxin-3,Relaxin Family Receptors,RXFP3,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#D8BFD8,Thistle
+Relaxin-3,Relaxin Family Receptors,RXFP4,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#D8BFD8,Thistle
+VIP/PACAP,VIP and PACAP Receptors,VPAC1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFA07A,LightSalmon
+VIP/PACAP,VIP and PACAP Receptors,VPAC2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFA07A,LightSalmon
+PACAP,VIP and PACAP Receptors,PAC1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#FFA07A,LightSalmon
+Trace Amines,Trace Amine-Associated Receptors,TAAR1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#3CB371,MediumSeaGreen
+Trace Amines,Trace Amine-Associated Receptors,TAAR2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#3CB371,MediumSeaGreen
+Trace Amines,Trace Amine-Associated Receptors,TAAR5,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#3CB371,MediumSeaGreen
+Prokineticin,Prokineticin Receptors,PROKR1,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#8FBC8F,DarkSeaGreen
+Prokineticin,Prokineticin Receptors,PROKR2,Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#8FBC8F,DarkSeaGreen
+Neurotrophins,Trk Receptors,TrkA,Single polypeptide chain (Receptor tyrosine kinase),1,#32CD32,LimeGreen
+Neurotrophins,Trk Receptors,TrkB,Single polypeptide chain (Receptor tyrosine kinase),1,#32CD32,LimeGreen
+Neurotrophins,Trk Receptors,TrkC,Single polypeptide chain (Receptor tyrosine kinase),1,#32CD32,LimeGreen
+Neurotrophins,p75 Neurotrophin Receptor,p75^NTR,Single polypeptide chain (TNF receptor superfamily),1,#32CD32,LimeGreen
+Estrogen,G Protein-Coupled Estrogen Receptor,GPER1 (GPR30),Single polypeptide chain (GPCR),1 (monomer) or 2 (dimer),#BA55D3,MediumOrchid
+Testosterone,Androgen Receptors,Androgen Receptor (AR),Single polypeptide chain (Nuclear receptor),1,#483D8B,DarkSlateBlue
