@@ -1,0 +1,233 @@
+Neuron Type	Receptor Subtypes
+Retina - Rods	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Kainate Receptors - Homomeric GluK1
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D4
+Endocannabinoids: CB1, CB2
+Acetylcholine: Neuronal α7 Homomeric
+Purinergic: P2X2, P2X4, P2Y1
+Serotonin: 5-HT2A
+Neuropeptides: NPY Receptors - Y1, VIP/PACAP Receptors - VPAC1
+Retina - S-Cones (Blue)	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D4
+Endocannabinoids: CB1
+Acetylcholine: Neuronal α7 Homomeric
+Purinergic: P2Y1, P2Y2
+Serotonin: 5-HT7
+Neuropeptides: VIP/PACAP Receptors - VPAC1
+Retina - M-Cones (Green)	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors, GABA_C Receptors
+Dopamine: D1
+Endocannabinoids: CB1, CB2
+Acetylcholine: Neuronal α7 Homomeric, M1, M2
+Purinergic: P2X2, P2X4, P2Y1
+Serotonin: 5-HT2A
+Neuropeptides: VIP/PACAP Receptors - VPAC1
+Retina - L-Cones (Red)	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors, GABA_C Receptors
+Dopamine: D1, D4
+Endocannabinoids: CB1
+Acetylcholine: Neuronal α7 Homomeric, M2
+Purinergic: P2X2, P2Y1, P2Y2
+Serotonin: 5-HT2A, 5-HT7
+Neuropeptides: VIP/PACAP Receptors - VPAC1, Substance P Receptors - NK1
+Retina - Rod Bipolar Cells - ON	Glutamate: Group III mGluRs - mGluR6
+GABA: GABA_A Receptors - Common Form, GABA_C Receptors
+Glycine: GlyR - Homomeric α1
+Dopamine: D1, D5
+Purinergic: P2X3, P2Y1
+Retina - Cone Bipolar Cells - ON	Glutamate: Group III mGluRs - mGluR6
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Glycine: GlyR - Homomeric α1
+Dopamine: D1, D5
+Purinergic: P2X4, P2Y2
+Acetylcholine: M1
+Retina - Cone Bipolar Cells - OFF	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1
+GABA: GABA_A Receptors - Common Form, GABA_C Receptors
+Glycine: GlyR - Homomeric α1, GlyR - Heteromeric α1β
+Dopamine: D2, D4
+Serotonin: 5-HT2A
+Retina - Horizontal Cells - H1	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1, Group III mGluRs - mGluR6
+GABA: GABA_A Receptors - Common Form, GABA_C Receptors
+Dopamine: D1, D2
+Acetylcholine: M1, M2
+Purinergic: P2X4, P2Y1
+Retina - Horizontal Cells - H2	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Heteromeric Combinations, Group III mGluRs - mGluR7
+GABA: GABA_A Receptors - Common Form, GABA_C Receptors
+Dopamine: D1, D4
+Serotonin: 5-HT2A
+Purinergic: P2X4, P2Y2
+Retina - Amacrine Cells - Starburst	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Acetylcholine: Neuronal α7 Homomeric, M1, M2, M4
+Dopamine: D1, D2
+Purinergic: P2X2, P2X4, P2Y1
+Retina - Amacrine Cells - AII	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B
+Glycine: GlyR - Homomeric α1, GlyR - Heteromeric α1β
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D5
+Retina - Amacrine Cells - Wide-Field	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Heteromeric Combinations
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D2
+Serotonin: 5-HT2A, 5-HT2C
+Histamine: H1, H3
+Purinergic: P2X4, P2Y1
+Retina - Amacrine Cells - Narrow-Field	GABA: GABA_A Receptors - Common Form, GABA_B Receptors, GABA_C Receptors
+Glycine: GlyR - Homomeric α1, GlyR - Heteromeric α1β
+Glutamate: NMDA Receptors - GluN1/GluN2D
+Dopamine: D4
+Purinergic: P2X3, P2Y2
+Retina - Amacrine Cells - Dopaminergic	Dopamine: D1, D2, D4, D5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Glutamate: AMPA Receptors - Homomeric GluA1
+Serotonin: 5-HT2A
+Histamine: H1, H3
+Purinergic: P2X4, P2Y6
+Retina - Amacrine Cells - VIP-Expressing	Glutamate: AMPA Receptors - Homomeric GluA1
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Neuropeptides: VIP/PACAP Receptors - VPAC1, VPAC2
+Purinergic: P2X3, P2Y1
+Retina - Amacrine Cells - Nitric Oxide-Producing	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1
+GABA: GABA_A Receptors - Common Form
+Nitric Oxide: sGC α1β1 Heterodimer
+Dopamine: D1, D2
+Retina - Amacrine Cells - Rod-Amacrine	GABA: GABA_A Receptors - Common Form, GABA_B Receptors, GABA_C Receptors
+Glycine: GlyR - Homomeric α1
+Glutamate: NMDA Receptors - GluN1/GluN2B
+Purinergic: P2X3
+Retina - Amacrine Cells - Cone-Amacrine	GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B
+Dopamine: D2
+Purinergic: P2Y2
+Retina - Ganglion Cells - ON	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Glycine: GlyR - Homomeric α1
+Acetylcholine: M1, M2, Neuronal α7 Homomeric
+Dopamine: D1, D5
+Serotonin: 5-HT1A, 5-HT2A
+Purinergic: P2X3, P2X4, P2Y1, P2Y2
+Histamine: H1, H2
+Retina - Ganglion Cells - OFF	Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1, Group I mGluRs - mGluR1
+GABA: GABA_A Receptors - Common Form, GABA_C Receptors
+Glycine: GlyR - Homomeric α1, GlyR - Homomeric α2
+Acetylcholine: M1, M2
+Dopamine: D2, D4
+Serotonin: 5-HT1A, 5-HT2C
+Purinergic: P2X3, P2Y1, P2Y6
+Histamine: H1, H2
+Retina - Ganglion Cells - ON-OFF	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Kainate Receptors - Homomeric GluK1, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_C Receptors
+Glycine: GlyR - Homomeric α1, GlyR - Heteromeric α1β
+Acetylcholine: Neuronal α7 Homomeric, M1, M3
+Dopamine: D1, D2, D4
+Serotonin: 5-HT2A, 5-HT2B, 5-HT3A Homomeric
+Purinergic: P2X3, P2X4, P2Y1, P2Y2
+Neuropeptides: VIP/PACAP Receptors - VPAC1, NPY Receptors - Y1
+Histamine: H1, H2
+Retina - Ganglion Cells - DS	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Kainate Receptors - Homomeric GluK1
+GABA: GABA_A Receptors - Common Form, GABA_C Receptors
+Glycine: GlyR - Homomeric α1
+Acetylcholine: Neuronal α7 Homomeric, M1, M2
+Dopamine: D1, D2, D5
+Serotonin: 5-HT2A, 5-HT2C
+Purinergic: P2X4, P2Y1, P2Y2
+Neuropeptides: VIP/PACAP Receptors - VPAC1, NPY Receptors - Y1
+Histamine: H1, H2
+Retina - Ganglion Cells - Midget	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors, GABA_C Receptors
+Glycine: GlyR - Homomeric α1, GlyR - Heteromeric α1β
+Acetylcholine: M1, M2, M4, Neuronal α7 Homomeric
+Dopamine: D1, D4
+Serotonin: 5-HT1A, 5-HT2A
+Purinergic: P2X3, P2X4, P2Y1, P2Y6
+Neuropeptides: VIP/PACAP Receptors - VPAC1, NPY Receptors - Y1
+Histamine: H1, H2
+Retina - Ganglion Cells - Parasol	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, Kainate Receptors - Heteromeric Combinations, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors, GABA_C Receptors
+Glycine: GlyR - Homomeric α1, GlyR - Heteromeric α1β
+Acetylcholine: Neuronal α7 Homomeric, M1, M2
+Dopamine: D1, D2
+Serotonin: 5-HT2A, 5-HT3A Homomeric
+Purinergic: P2X3, P2X4, P2Y1, P2Y2
+Neuropeptides: VIP/PACAP Receptors - VPAC1, Substance P Receptors - NK1
+Histamine: H1, H2
+Retina - Ganglion Cells - Small Bistratified	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Kainate Receptors - Homomeric GluK1, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors, GABA_C Receptors
+Glycine: GlyR - Homomeric α1, GlyR - Heteromeric α1β
+Acetylcholine: Neuronal α7 Homomeric, M1
+Dopamine: D1, D4
+Serotonin: 5-HT1A, 5-HT2A
+Purinergic: P2X3, P2X4, P2Y1, P2Y6
+Neuropeptides: VIP/PACAP Receptors - VPAC1
+Histamine: H1, H2
+Retina - ipRGCs - M1	Melanopsin: Melanopsin (OPN4)
+Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Acetylcholine: Neuronal α7 Homomeric
+Dopamine: D1, D5
+Purinergic: P2X2, P2Y1
+Serotonin: 5-HT1A, 5-HT2A
+Neuropeptides: VIP/PACAP Receptors - VPAC1
+Histamine: H1, H2
+Retina - ipRGCs - M2	Melanopsin: Melanopsin (OPN4)
+Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Acetylcholine: Neuronal α7 Homomeric, M1, M2
+Dopamine: D2, D4
+Purinergic: P2X3, P2Y2
+Serotonin: 5-HT2A, 5-HT7
+Neuropeptides: VIP/PACAP Receptors - VPAC1
+Histamine: H1
+Retina - ipRGCs - M3	Melanopsin: Melanopsin (OPN4)
+Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2B, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form
+Acetylcholine: Neuronal α7 Homomeric
+Dopamine: D1, D5
+Purinergic: P2X2, P2Y1
+Serotonin: 5-HT1A, 5-HT2C
+Neuropeptides: VIP/PACAP Receptors - VPAC1
+Retina - ipRGCs - M4	Melanopsin: Melanopsin (OPN4)
+Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form
+Acetylcholine: Neuronal α7 Homomeric, M1
+Purinergic: P2X4, P2Y1
+Histamine: H1, H2
+Retina - ipRGCs - M5	Melanopsin: Melanopsin (OPN4)
+Glutamate: AMPA Receptors - Homomeric GluA1, Kainate Receptors - Homomeric GluK1, Group I mGluRs - mGluR1, mGluR5
+GABA: GABA_A Receptors - Common Form
+Purinergic: P2Y2, P2X4
+Retina - W-Cells	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, GluN1/GluN2B
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D2
+Purinergic: P2X2, P2Y1, P2Y2
+Acetylcholine: Neuronal α7 Homomeric
+Serotonin: 5-HT1A, 5-HT2A
+Histamine: H1, H2
+Retina - Y-Cells	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, GluN1/GluN2B
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D5
+Purinergic: P2X4, P2Y1
+Serotonin: 5-HT2A, 5-HT7
+Acetylcholine: Neuronal α7 Homomeric
+Histamine: H1
+Retina - Z-Cells	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, GluN1/GluN2B
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D2
+Purinergic: P2X2, P2Y1
+Serotonin: 5-HT2A
+Acetylcholine: Neuronal α7 Homomeric
+Retina - Color-Opponent Cells	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, GluN1/GluN2B
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D2
+Purinergic: P2Y1, P2X3
+Acetylcholine: Neuronal α7 Homomeric
+Serotonin: 5-HT2A
+Neuropeptides: VIP/PACAP Receptors - VPAC1
+Histamine: H1, H2
+Retina - Motion-Sensitive Cells	Glutamate: AMPA Receptors - Homomeric GluA1, NMDA Receptors - GluN1/GluN2A, GluN1/GluN2B
+GABA: GABA_A Receptors - Common Form, GABA_B Receptors
+Dopamine: D1, D2, D5
+Purinergic: P2X4, P2Y1, P2X7
+Acetylcholine: Neuronal α7 Homomeric
+Serotonin: 5-HT2A, 5-HT3A Homomeric
+Neuropeptides: Substance P Receptors - NK1
