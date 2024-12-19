@@ -1,0 +1,6 @@
+Cell types of Retinal Ganglion Cells: https://pmc.ncbi.nlm.nih.gov/articles/PMC8175861/
+Morphology and Circuitry of Ganglion cells: https://webvision.med.utah.edu/book/part-ii-anatomy-and-physiology-of-the-retina/morphology-and-circuitry-of-ganglion-cells/
+Evidence for 5HT2A activity in W cells: https://pubmed.ncbi.nlm.nih.gov/29298533/
+Evidence for mu opioid receptor in ipRGCs: https://pmc.ncbi.nlm.nih.gov/articles/PMC9781919/
+Evidence for opioid receptors in amacrine cells: https://pmc.ncbi.nlm.nih.gov/articles/PMC3367769/
+Wikipedia for RGCs: https://en.wikipedia.org/wiki/Retinal_ganglion_cell
