@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 // Scene setup
@@ -9,14 +10,31 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
 
+// CSS2D Renderer
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(window.innerWidth, window.innerHeight);
+labelRenderer.domElement.style.position = 'absolute';
+labelRenderer.domElement.style.top = '0px';
+labelRenderer.domElement.style.pointerEvents = 'none';  // ✅ Allow OrbitControls to work
+document.body.appendChild(labelRenderer.domElement);
+
 // Controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 controls.update();
 
-// Position camera
-camera.position.set(8, -4, 30); // Adjust for full table view
+// Create Notecard (HTML Element)
+const notecardDiv = document.createElement('div');
+notecardDiv.className = 'notecard';
+notecardDiv.textContent = 'I follow the cube!';
+notecardDiv.style.padding = '10px';
+notecardDiv.style.background = 'rgba(255,255,255,0.8)';
+notecardDiv.style.border = '1px solid black';
+
+// Attach to Three.js Object
+const notecardLabel = new CSS2DObject(notecardDiv);
+notecardLabel.position.set(0, 1, 0);
 
 // Periodic Table Elements with Groups (Full Table)
 const elements = [
@@ -83,20 +101,20 @@ const elements = [
 
     // Lanthanides & Actinides placed in their own row (row 5 & 6 for consistency)
     { symbol: 'La', atomicNumber: 57, row: 5, col: 3, group: 'lanthanide' },
-    { symbol: 'Ce', atomicNumber: 58, row: 9, col: 4, group: 'lanthanide' },
-    { symbol: 'Pr', atomicNumber: 59, row: 9, col: 5, group: 'lanthanide' },
-    { symbol: 'Nd', atomicNumber: 60, row: 9, col: 6, group: 'lanthanide' },
-    { symbol: 'Pm', atomicNumber: 61, row: 9, col: 7, group: 'lanthanide' },
-    { symbol: 'Sm', atomicNumber: 62, row: 9, col: 8, group: 'lanthanide' },
-    { symbol: 'Eu', atomicNumber: 63, row: 9, col: 9, group: 'lanthanide' },
-    { symbol: 'Gd', atomicNumber: 64, row: 9, col: 10, group: 'lanthanide' },
-    { symbol: 'Tb', atomicNumber: 65, row: 9, col: 11, group: 'lanthanide' },
-    { symbol: 'Dy', atomicNumber: 66, row: 9, col: 12, group: 'lanthanide' },
-    { symbol: 'Ho', atomicNumber: 67, row: 9, col: 13, group: 'lanthanide' },
-    { symbol: 'Er', atomicNumber: 68, row: 9, col: 14, group: 'lanthanide' },
-    { symbol: 'Tm', atomicNumber: 69, row: 9, col: 15, group: 'lanthanide' },
-    { symbol: 'Yb', atomicNumber: 70, row: 9, col: 16, group: 'lanthanide' },
-    { symbol: 'Lu', atomicNumber: 71, row: 9, col: 17, group: 'lanthanide' },
+    { symbol: 'Ce', atomicNumber: 58, row: 8, col: 4, group: 'lanthanide' },
+    { symbol: 'Pr', atomicNumber: 59, row: 8, col: 5, group: 'lanthanide' },
+    { symbol: 'Nd', atomicNumber: 60, row: 8, col: 6, group: 'lanthanide' },
+    { symbol: 'Pm', atomicNumber: 61, row: 8, col: 7, group: 'lanthanide' },
+    { symbol: 'Sm', atomicNumber: 62, row: 8, col: 8, group: 'lanthanide' },
+    { symbol: 'Eu', atomicNumber: 63, row: 8, col: 9, group: 'lanthanide' },
+    { symbol: 'Gd', atomicNumber: 64, row: 8, col: 10, group: 'lanthanide' },
+    { symbol: 'Tb', atomicNumber: 65, row: 8, col: 11, group: 'lanthanide' },
+    { symbol: 'Dy', atomicNumber: 66, row: 8, col: 12, group: 'lanthanide' },
+    { symbol: 'Ho', atomicNumber: 67, row: 8, col: 13, group: 'lanthanide' },
+    { symbol: 'Er', atomicNumber: 68, row: 8, col: 14, group: 'lanthanide' },
+    { symbol: 'Tm', atomicNumber: 69, row: 8, col: 15, group: 'lanthanide' },
+    { symbol: 'Yb', atomicNumber: 70, row: 8, col: 16, group: 'lanthanide' },
+    { symbol: 'Lu', atomicNumber: 71, row: 8, col: 17, group: 'lanthanide' },
 
     { symbol: "Hf", atomicNumber: 72, row: 5, col: 4, group: "transition_metal" },
     { symbol: "Ta", atomicNumber: 73, row: 5, col: 5, group: "transition_metal" },
@@ -117,20 +135,20 @@ const elements = [
     { symbol: "Ra", atomicNumber: 88, row: 6, col: 2, group: "alkaline_earth" },
 
     { symbol: 'Ac', atomicNumber: 89, row: 6, col: 3, group: 'actinide' },
-    { symbol: 'Th', atomicNumber: 90, row: 10, col: 4, group: 'actinide' },
-    { symbol: 'Pa', atomicNumber: 91, row: 10, col: 5, group: 'actinide' },
-    { symbol: 'U', atomicNumber: 92, row: 10, col: 6, group: 'actinide' },
-    { symbol: 'Np', atomicNumber: 93, row: 10, col: 7, group: 'actinide' },
-    { symbol: 'Pu', atomicNumber: 94, row: 10, col: 8, group: 'actinide' },
-    { symbol: 'Am', atomicNumber: 95, row: 10, col: 9, group: 'actinide' },
-    { symbol: 'Cm', atomicNumber: 96, row: 10, col: 10, group: 'actinide' },
-    { symbol: 'Bk', atomicNumber: 97, row: 10, col: 11, group: 'actinide' },
-    { symbol: 'Cf', atomicNumber: 98, row: 10, col: 12, group: 'actinide' },
-    { symbol: 'Es', atomicNumber: 99, row: 10, col: 13, group: 'actinide' },
-    { symbol: 'Fm', atomicNumber: 100, row: 10, col: 14, group: 'actinide' },
-    { symbol: 'Md', atomicNumber: 101, row: 10, col: 15, group: 'actinide' },
-    { symbol: 'No', atomicNumber: 102, row: 10, col: 16, group: 'actinide' },
-    { symbol: 'Lr', atomicNumber: 103, row: 10, col: 17, group: 'actinide' },
+    { symbol: 'Th', atomicNumber: 90, row: 9, col: 4, group: 'actinide' },
+    { symbol: 'Pa', atomicNumber: 91, row: 9, col: 5, group: 'actinide' },
+    { symbol: 'U', atomicNumber: 92, row: 9, col: 6, group: 'actinide' },
+    { symbol: 'Np', atomicNumber: 93, row: 9, col: 7, group: 'actinide' },
+    { symbol: 'Pu', atomicNumber: 94, row: 9, col: 8, group: 'actinide' },
+    { symbol: 'Am', atomicNumber: 95, row: 9, col: 9, group: 'actinide' },
+    { symbol: 'Cm', atomicNumber: 96, row: 9, col: 10, group: 'actinide' },
+    { symbol: 'Bk', atomicNumber: 97, row: 9, col: 11, group: 'actinide' },
+    { symbol: 'Cf', atomicNumber: 98, row: 9, col: 12, group: 'actinide' },
+    { symbol: 'Es', atomicNumber: 99, row: 9, col: 13, group: 'actinide' },
+    { symbol: 'Fm', atomicNumber: 100, row: 9, col: 14, group: 'actinide' },
+    { symbol: 'Md', atomicNumber: 101, row: 9, col: 15, group: 'actinide' },
+    { symbol: 'No', atomicNumber: 102, row: 9, col: 16, group: 'actinide' },
+    { symbol: 'Lr', atomicNumber: 103, row: 9, col: 17, group: 'actinide' },
 
     { symbol: "Rf", atomicNumber: 104, row: 6, col: 4, group: "transition_metal" },
     { symbol: "Db", atomicNumber: 105, row: 6, col: 5, group: "transition_metal" },
@@ -165,6 +183,36 @@ const groupColors = {
     'lanthanide': 0xff99cc,         // Soft Pinkish-Red (To differentiate rare-earth elements)
     'actinide': 0xff6699,           // Warm Magenta-Pink (To contrast lanthanides)
 };
+
+// Function to compute bounding box of all objects
+function computeBoundingBox(objects) {
+    const box = new THREE.Box3();
+    objects.forEach(obj => {
+        box.expandByObject(obj);
+    });
+    return box;
+}
+
+// Function to adjust camera to bounding box
+function adjustCameraToBoundingBox(box) {
+    const center = new THREE.Vector3();
+    box.getCenter(center);
+
+    const size = new THREE.Vector3();
+    box.getSize(size);
+
+    // Determine the distance to fit the entire bounding box with padding
+    const maxDim = Math.max(size.x, size.y, size.z);
+    const padding = 1.2; // Scale factor for padding
+    const fovRad = THREE.MathUtils.degToRad(camera.fov);
+    let distance = (maxDim / 2) / Math.tan(fovRad / 2) * padding;
+
+    camera.position.set(center.x, center.y, distance);
+    camera.lookAt(center);
+
+    controls.target.set(center.x, center.y, 0);
+    controls.update();
+}
 
 
 // Function to create a text texture
@@ -208,7 +256,7 @@ function createElement(symbol, atomicNumber, x, y, group) {
         side: THREE.DoubleSide,
     });
     textMaterial.map.minFilter = THREE.LinearFilter;
-    const textGeometry = new THREE.PlaneGeometry(0.9, 0.9);
+    const textGeometry = new THREE.PlaneGeometry(0.8, 0.8);
     const textMesh = new THREE.Mesh(textGeometry, textMaterial);
     textMesh.position.set(0, 0, 0.011);
 
@@ -218,8 +266,8 @@ function createElement(symbol, atomicNumber, x, y, group) {
     // const frameMesh = new THREE.Mesh(frameGeometry, frameMaterial);
     // frameMesh.position.set(0, 0, 0.01);
 
-    // ✅ Create extruding bar with default 90% glow
-    const barGeometry = new THREE.BoxGeometry(0.8, 0.8, 0.01);
+    // ✅ Create extruding bar with default 120% glow
+    const barGeometry = new THREE.BoxGeometry(0.72, 0.72, 0.01);
     const barMaterial = new THREE.MeshStandardMaterial({
         color: elementColor,
         transparent: true,
@@ -259,6 +307,9 @@ elements.forEach(({ symbol, atomicNumber, row, col, group }) => {
     objects.push(element);
 });
 
+const boundingBox = computeBoundingBox(objects);
+adjustCameraToBoundingBox(boundingBox);
+
 // Raycaster for detecting clicks & hover
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -293,13 +344,49 @@ window.addEventListener('mousemove', (event) => {
     }
 });
 
+let isDragging = false;
+let mouseDownPos = { x: 0, y: 0 };
+const dragThreshold = 5; // Pixels moved before it's considered a drag
+
+// Capture initial mouse position on mousedown
+window.addEventListener('mousedown', (event) => {
+    isDragging = false; // Reset dragging state
+    mouseDownPos.x = event.clientX;
+    mouseDownPos.y = event.clientY;
+});
+
+// Detect if the mouse moves significantly
+window.addEventListener('mousemove', (event) => {
+    if (
+        Math.abs(event.clientX - mouseDownPos.x) > dragThreshold ||
+        Math.abs(event.clientY - mouseDownPos.y) > dragThreshold
+    ) {
+        isDragging = true; // Considered a drag
+    }
+});
+
+// Determine if it was a click or a drag on mouseup
+window.addEventListener('mouseup', (event) => {
+    if (!isDragging) {
+        console.log('Click detected!');
+        handleClick(event);
+    } else {
+        console.log('Drag detected!');
+    }
+});
+
+// Variable to track the currently selected element
+let selectedElement = null;
+
 // Click interaction
-window.addEventListener('click', (event) => {
+function handleClick(event)
+{
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);
 
     const intersects = raycaster.intersectObjects(scene.children, true);
+
     if (intersects.length > 0) {
         const clickedObject = intersects[0].object.parent;
         if (clickedObject.userData && clickedObject.userData.bar) {
@@ -310,15 +397,38 @@ window.addEventListener('click', (event) => {
                 bar.scale.z = 0.01; // Collapse back
                 bar.position.z = 0.05; // Reset to coplanar
                 bar.material.opacity = 0.25
-            } else {
+            } 
+            else {
                 bar.scale.z = clickedObject.userData.atomicNumber*10; // Scale proportionally
                 bar.position.z = bar.scale.z / 200 + 0.05; // Offset forward so it grows outward
                 bar.material.opacity = 0.5
             }
             clickedObject.userData.expanded = !expanded;
         }
+
+        if (clickedObject.userData && clickedObject.userData.atomicNumber) {    
+            // Otherwise, attach the label to the new element
+            notecardDiv.textContent = `Element: ${clickedObject.userData.atomicNumber}`;
+            
+            // Remove label from previous element (if any)
+            if (selectedElement) {
+                selectedElement.remove(notecardLabel);
+            }
+    
+            // Attach to the new element
+            clickedObject.add(notecardLabel);
+            notecardLabel.position.set(0, 1, 0); // Adjust position
+            selectedElement = clickedObject; // Update selected element
+        }
     }
-});
+
+    else {
+        if (selectedElement != null) {
+            console.log("Selected element is not null")
+            selectedElement.remove(notecardLabel)
+        }
+    }
+}
 
 window.addEventListener('resize', () => {
     const aspectRatio = window.innerWidth / window.innerHeight;
@@ -337,6 +447,7 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
 
     renderer.setSize(window.innerWidth, window.innerHeight);
+    labelRenderer.setSize(window.innerWidth, window.innerHeight);
 });
 
 // Animation loop
@@ -344,5 +455,6 @@ function animate() {
     requestAnimationFrame(animate);
     controls.update();
     renderer.render(scene, camera);
+    labelRenderer.render(scene, camera);  // ✅ Render the CSS labels
 }
 animate();
