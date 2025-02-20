@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import gsap from 'gsap';
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 // Scene setup
 const scene = new THREE.Scene();
@@ -233,13 +236,19 @@ function createTextTexture(symbol, atomicNumber, groupColor, width = 512, height
     ctx.fillStyle = 'white'; // Keep text white for contrast
     ctx.textAlign = 'center';
 
+    ctx.letterSpacing = "20px";
+
     // Render atomic number (top)
-    ctx.font = 'Bold 65px "IBM Plex Mono", "Consolas", monospace, sans-serif';
+    ctx.font = 'Bold 60px "Roboto Mono", monospace';
+    //ctx.font = 'Bold 60px "Helvetica", sans-serif';
+    //ctx.font = 'Bold 65px Montserrat, sans-serif'; // ✅ Apply Montserrat
     ctx.fillText(atomicNumber, width / 2, height / 4);
 
     // Render element symbol (center)
-    ctx.font = 'Bold 140px "IBM Plex Mono", "Consolas", monospace, sans-serif';
-    ctx.fillText(symbol, width / 2, height / 1.5);
+    ctx.font = 'Bold 140px "Roboto Mono", monospace';
+    //ctx.font = 'Bold 140px "Helvetica", sans-serif';
+    //ctx.font = 'Bold 140px Montserrat, sans-serif'; // ✅ Apply Montserrat
+    ctx.fillText(symbol, width / 2, height / 1.4);
 
     return new THREE.CanvasTexture(canvas);
 }
@@ -271,7 +280,7 @@ function createElement(symbol, atomicNumber, x, y, group) {
     const barMaterial = new THREE.MeshStandardMaterial({
         color: elementColor,
         transparent: true,
-        opacity: 0.25,
+        opacity: 0.0,
         emissive: new THREE.Color(elementColor), // Set emissive color same as element
         emissiveIntensity: 1.2, // Default glow at 120%
     });
@@ -293,11 +302,10 @@ function createElement(symbol, atomicNumber, x, y, group) {
     groupObj.position.set(x, y, 0);
 
     // Store reference for click interaction
-    groupObj.userData = { bar, expanded: false, atomicNumber };
+    groupObj.userData = { bar, textMesh, expanded: false, atomicNumber, elementColor};
 
     return groupObj;
 }
-
 
 // Create all elements and add to scene
 const objects = [];
@@ -324,21 +332,52 @@ window.addEventListener('mousemove', (event) => {
     // Find the first object that is actually a bar
     const intersects = raycaster.intersectObjects(objects.map(obj => obj.userData.bar), true);
 
+    var hoveredElement;
+    var hsl = { h: 0, s: 0, l: 0 }; // HSL forma
+
     if (intersects.length > 0) {
         const hoveredBar = intersects[0].object; // This is the actual bar being hovered
 
         // Reset previous hovered bar if different
         if (lastHoveredBar && lastHoveredBar !== hoveredBar) {
+            hoveredElement = lastHoveredBar.parent.userData;
+            hoveredElement.textMesh.material.color.set(0xffffff);
             lastHoveredBar.material.emissiveIntensity = 1.2; // Reset previous bar glow
+            if (hoveredElement.expanded){
+                lastHoveredBar.opacity = 0.5;
+            }
+            else{
+                lastHoveredBar.opacity = 0;
+            }
         }
 
         // Apply glow effect to new bar
         hoveredBar.material.emissiveIntensity = 2;
         lastHoveredBar = hoveredBar;
-    } else {
+        hoveredElement = lastHoveredBar.parent.userData;
+        
+        new THREE.Color(hoveredElement.elementColor).getHSL(hsl);
+        hsl.l = 0.8;
+        hoveredElement.textMesh.material.color.setHSL(hsl.h, hsl.s, hsl.l);
+        if (hoveredElement.expanded){
+            lastHoveredBar.material.opacity = 0.5;
+        }
+        else{
+            lastHoveredBar.material.opacity = 0;
+        }
+    } 
+    else {
         // If moving to whitespace, reset the last hovered bar
         if (lastHoveredBar) {
             lastHoveredBar.material.emissiveIntensity = 1.2;
+            hoveredElement = lastHoveredBar.parent.userData;
+            hoveredElement.textMesh.material.color.set(0xffffff);
+            if (hoveredElement.expanded){
+                lastHoveredBar.material.opacity = 0.5;
+            }
+            else{
+                lastHoveredBar.material.opacity = 0;
+            }
             lastHoveredBar = null;
         }
     }
@@ -368,10 +407,7 @@ window.addEventListener('mousemove', (event) => {
 // Determine if it was a click or a drag on mouseup
 window.addEventListener('mouseup', (event) => {
     if (!isDragging) {
-        console.log('Click detected!');
         handleClick(event);
-    } else {
-        console.log('Drag detected!');
     }
 });
 
@@ -393,16 +429,47 @@ function handleClick(event)
             const bar = clickedObject.userData.bar;
             const expanded = clickedObject.userData.expanded;
 
+            var scaleTarget, positionTarget, opacityTarget;
+
             if (expanded) {
+                scaleTarget = 0.01;
+                positionTarget = 0.05;
+                opacityTarget = 0.0;
+                /*
                 bar.scale.z = 0.01; // Collapse back
                 bar.position.z = 0.05; // Reset to coplanar
                 bar.material.opacity = 0.25
+                */
             } 
             else {
+                scaleTarget = clickedObject.userData.atomicNumber*10; // Scale proportionally
+                positionTarget = scaleTarget / 200 + 0.05; // Offset forward so it grows outward
+                opacityTarget = 0.5;
+                /*
                 bar.scale.z = clickedObject.userData.atomicNumber*10; // Scale proportionally
                 bar.position.z = bar.scale.z / 200 + 0.05; // Offset forward so it grows outward
                 bar.material.opacity = 0.5
+                */
             }
+
+            gsap.to(bar.scale, {
+                duration: 1,
+                ease: "power2.out",
+                z: scaleTarget // ✅ Correct way to animate scale.z
+            });
+            
+            gsap.to(bar.position, {
+                duration: 1,
+                ease: "power2.out",
+                z: positionTarget // ✅ Correct way to animate position.z
+            });
+            
+            gsap.to(bar.material, {
+                duration: 1,
+                ease: "power2.out",
+                opacity: opacityTarget // ✅ Correct way to animate material.opacity
+            });
+            
             clickedObject.userData.expanded = !expanded;
         }
 
@@ -424,7 +491,6 @@ function handleClick(event)
 
     else {
         if (selectedElement != null) {
-            console.log("Selected element is not null")
             selectedElement.remove(notecardLabel)
         }
     }
